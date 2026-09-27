@@ -1,49 +1,39 @@
    <!DOCTYPE html>
 <html>
-<head>
-    <title>Understanding website</title>
-<body>
 
+<body>
     <style>
         body {
-            background-image: url("FB_IMG_17549600139255295.jpg");
+            background-image: url("d22532d3-62db-4ff1-a7dc-b87e0584bda9.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-               }
+            font-family: Arial;
+            text-align: center;
+            margin; 0.5;
+              }
 
         header {
-            background-color: #222;
-            color: white;
-            padding: 30px 20px;
+            background-color: blue;
+            color: yellow;
+            padding: 0.01px;
+            img : 10px;
                }
-
-        body {
-              font-family: Arial;
-              text-align: center;
-              background-color: black;
-              margin; 0.5;
-             }
-
-        li {
-           color: yellow;
-           text-align: justify;
-           }
           
         nav {
              background-color: red;
-             padding: 15px
+             padding: 5px
             }
     
         nav a {
             color: blue;
-            margin: 15px
+            margin: 5px
             text-decoration: none;
+            text-align: center;
               }
 
         h1 {
-            background-color: yellow;
             color: red;
             text-align: center;
             font-size: 60px
@@ -51,29 +41,30 @@
        
         h2 {
            color: yellow;
-           text-align: left;
+           text-align: justify;
            font-size: 50px
            }
 
         h3 {
             color: yellow;
-            text-align: left;
+            text-align: justify;
             font-size: 40px
-        }
+            }
 
         h4 {
-            color: yellow;
-            text-align: left;
+            color: red;
+            text-align: justify;
             font-size: 30px
            }
 
         h5 {
-            color: yellow;
+            color: red;
             text-align: left;
             font-size: 20px
            }
+
        h6  {
-            color: yellow;
+            color: violet;
             text-align: left;
             font-size: 10px
            }
@@ -85,9 +76,10 @@
            text-align: justify;     
           }
  
-        img {
-            border-radius: 10px;
-            }
+        li {
+           color: yellow;
+           text-align: justify;
+           }
 
         button:hover {
             background-color: green;
@@ -97,11 +89,25 @@
 
        section {
            margin: 30px;
-           padding: 19px;
+           padding: 30px;
+           margin: 20px 0;
+           border-radius: 10px;
                }
 
+           section h2 {
+               color: #333;
+               font-size: 24px;
+               margin-bottom: 15px;
+                       }
+
+            section p {
+                color: #555
+                font-size: 24px;
+                line-height: 1.6;
+                       }
+
            .card {
-           background-color: pink;
+           background-color: orange;
            width: 250px;
            margin: 15px;
            padding: 25px;
@@ -111,109 +117,133 @@
            transition: 15.0s;
                   }
 
-        .card:hover
+        .card:hover {
             transform: translate(-10px);
                     }
 
        footer {
-           background-color: white;
+           background-color: green;
            color: red;
            padding: 15px
            margin-top: 40px;
               }
       
-@media (max-width: 600px) {
-
+@media (max-width: 600px;)
 
     nav a {
         display: block;
-        margin: 10px;
+        margin: 30px;
+        text-size:40px;
     }
 
     img {
-        max-width: 60px;
-        height: 60px;
+    max-width: 300px;
+    height: auto;
+    }
+
+    .profile {
+        width: 50px;
+        height: 50px;
+        object-fit: square;
+        border-radius: 30%;
+        object-fit: square;
+             }
+
+    </style>
+
+<button onclick="payWithPaystack()">Pay Now</button>
+
+<script src="https://js.paystack.co/v2/inline.js"></script>
+
+<script>
+function payWithPaystack() {
+    const popup = new PaystackPop();
+
+    popup.newTransaction({
+        key: 'pk_test-a659c5685ec4c222b87cc9b972589012d2c6cc6f',
+        email: 'frnmtmth@gmail.com',
+        amount: 500000,
+        currency: 'NGN',
+
+        onLoad: (response) => {
+            console.log("Payment loaded:", response);
+        },
+
+        onSuccess: (transaction) => {
+            alert("Payment successful!");
+            console.log(transaction);
+        },
+
+        onCancel: () => {
+            alert("Payment cancelled.");
+        },
+
+        onError: (error) => {
+            alert("Payment error: " + error.message);
+            console.log(error);
         }
-
-    .profile img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-        object-fit: cover;
-                 }
-     
-     </style>
+    });
+}
+</script>
 </body>
-
 <header>
-    <h1>UNDERSTANDING</h1>
+    <h1><img src="img1.jpg"></h1>
     <nav>
         <a href="#Home">Home</a>
         <a href="#About">About</a>
         <a href="#Contact">Contact</a>
         <a href="#Skills">Skills</a>
+        <a href="#Audios">Audios</a>
+        <a href="#Videos">Videos</a>
         <a href="#Projects">Projects</a>
+        <a href="#support">Support</a>
     </nav>
 </header>
- 
-<section id="Home" class="profile">
-  
-    <h3>UNDERSTANDING-WEB DESIGN</h3>
-    <img src="transform.jpg">
-    <h2>This is Under that is standing which makes it UNDERSTANDING.</h2>
-    <img src="transforms.jpg">
-    <h3>When we are talking of Understanding you should know it's not a small thing</h3>
-    <img scr="transform.jpg">
-    <h1>May The Lord help me</h1>
 
-    <img src="1785604345310.jpg">
+<section id="Home">
+    <h1>UNDERSTANDING WEB DESIGN</h1>
+    <h3><img src="transform.jpg"></h3>
+    <p>This is Under that is standing which makes it UNDERSTANDING.</p>
+    <h2><img src="transforms.jpg"></h2>
+    <h2>When we are talking of Understanding you should know it's not a small thing.</h2>
+    <h1>May The Lord help me.</h1>
+    <h2><img src="feranmi3.jpg"><img src="1785604345310.jpg"></h2>
     <h2>When we are talking of true mum that means you are referring to her.</h2>
-    <ups.mp4>
+    <h1>My Demo Video</h1>
 
-    <button onclick="alert('Thank you for visiting my website!)">
-    </button>
-<a href="#Contact">Contact</a>
-
-</section>
-
-    <br><br>
-
-    <button> onlick="alert('Hello! welcome to my world.')">
+    <video width="190" controls>
+    <source src="ups.mp4" type="video/mp4">
+    </video>
+    <button onlick="alert('Hello! welcome to my world.')">
         Click Here<a href="#Contact">Contact</a>
     </button>
+</section>
 
     <section id="About">
-        <h2>OLUWAFERANMI</h2>
-        <p>My name is Oluwaferanmi.</p>
-        <img src="FERANMI.jpg"
-        <p>The meaning of Oluwaferanmi is that The Lord Loves me.</>
-        <p>Truly The Lord Loves me because He didnt condem the World.</p>
-        <p>I am child of God because God himself turn to human being and come to this earth and surrender himself for me.</p>
-        <p>The Lord loves me and I must love Him also so that I won't be ungrateful.</p>
-        <p>He lays example of how I should live if truly I want Him to know I love Him.</p>
-        <p>He said I must Love my Neigbor as myself if I want to Him in my life</p>
-        <p>The four letter LOVE is not just a word but a powerful that one must be careful when observing it</p>
-        <p>
+        <h1>OLUWAFERANMI</h1>
+        <h5>My name is Oluwaferanmi.</h5>
+        <h5><img src="outdoor.jpg"></h5>
+        <h5>The meaning of Oluwaferanmi is that The Lord Loves me.</h5>
+        <h5>Truly The Lord Loves me because He didnt condem the World.</h5>
+        <h5>I am child of God because God himself turn to human being and come to this earth and surrender himself for me.</h5>
+        <h5>The Lord loves me and I must love Him also so that I won't be ungrateful.</h5>
+        <h5>He lays example of how I should live if truly I want Him to know I love Him.</h5>
+        <h5>He said I must Love my Neigbor as myself if I want to Him in my life</h5>
+        <h5>The four letter LOVE is not just a word but a powerful that one must be careful when observing it</h5>
         <a href="#Contact">Contact</a>
      </section>
 
      <section id="Skills">
          <h2>WORKPLACE</h2>
 <div class="cards">
-         <div class="cards">
+
+          <div class="card">
                  <h2>WEBSITE</h2>
                  <p>I can build the structure of webpage professionally.</p>
                  <a href="#Contact">Contact</a>
-         </div>
-
-         <div class="card">
-                 <h2>CSS</h2>
-                 <p>I can style websites andmake them look well.</p>
-                 <a href="#Contact">Contact</a>
-         </div>
-
-         <div class="card">
+          </div>
+  
+        <div class="card">
                 <h2>Call Me for your DJ Mix Play</h2>
                 <p>I am good in Mixing Good Music together that will makes sense to your tune.</p>
                 <a href="#Contact">Contact</a> 
@@ -251,112 +281,129 @@
      <section id="Contact">
          <h2>Contact Me</h2>
          
-         <strong><p>You can contact me by phone.</p></strong>
+         <strong><p>You can call me.</p></strong>
 
-        <p>Call me: <a href="tel: +2349031252585">+234 903 125 2585</a></p>
+        <h5><a href="tel: +2349031252585">+234 903 125 2585</a></h5>
         <a href="mailto:frnmtmth@gmail.com">Send Me an Email</a>
-        <a href="https://wa.me/2349031252585?text=Hello%20Feranmi,%201%20am%20interested%20in%20your%20website%20services."
-        target="_blank">
-        <button>chat with me on whatsapp</button>
-        </a>
+        <button>chat with me on whatsapp<a href="https://wa.me/2349031252585?text=Hello%20Feranmi,%201%20am%20interested%20in%20your%20website%20services."target="_09031252585"></a></button>
+        
+        
+        
      </section>
+
+     <section id="Audios">
+     <h3><a href="#Audios">My Music</a></h3>
+     <h5>I make music and you can see and listen to them for free when you click the button below</h5>
+     <audio controls>
+     <source src="231.mp3" type="audio/mp3">
+     </audio>
+     <audio controls>
+     <source src="101.mpo3" typr="audi/mp3">
+     </audio>
+     </section>
+
+<section id="Videos">
+<h1>My Demo Video</h1>
+    <video width="190" controls>
+    <source src="VID_20260428_181322.mp4" type="video/mp4">
+    </video>
     
      <section id="Projects">
-         <h2>REFERENCING GOD WITH HIS NAMES</h2>
+         <h1>REFERENCING GOD WITH HIS NAMES</h1>
 <strong> 
-<p>I PRAISE THE WOUNDED MESSIAH</p>
-<p>I WORSHIP MY LORD AND THE GOD</p>
-<p>I ADORE THE SAVIOUR</p>
-<p>I MAGNIFY THE LORD OF LORDS</p>
-<p>I EXALT THE ELSHADDAI</p>
-<p>I BLESS THE SOVEREIGN LORD OF ALL</p>
-<p>I LOVE EMMANUEL</p>
-<p>I WORSHIP THE ALPHA AND OMEGA</p>
-<p>I ADORE THE EVERLASTING GOD</p>
-<p>I GLORIFY THE SOVEREIGN LORD OF ALL</p>
-<p>I EXALT THE KING</p>
-<p>I MAGNIFY THE ELSHADAI</p>
-<p>I PRAISE THE WAY, THE TRUTH AND THE LIFE</p>
-<p>I WORSHIP THE LIFE AND THE ATONEMENT</p>
-<p>I ADORE THE BREAD OF LIFE</p>
-<p>I LOVE ALL I NEED</p>
-<p>I GLORIFY MY PROVIDER</p>
-<p>I PRAISE MY HEALING AND WHOLENESS</p>
-<p>I BLESS THE RESSURRECTION AND THE LIFE</p>
-<p>I APPRECIATE THE ARM OF GOD</p>
-<p>I THANK THE HOLY ONE OF GOD</p>
-<p>I UPLIFT THE ANNOINTED ONE</p>
-<p>I LOVE THE SON OF MAN</p>
-<p>I ADORE THE RABBONI</p>
-<p>I WORSHIP THE RANSOM</p>
-<p>I THANK THE ROSE OF SHARON</p>
-<p>I PRAISE THE SUN OF RIGHTEOUSNESS</p>
-<p>I EXALT THE BRIDEGROOM</p>
-<p>I WORSHIP THE BANNER OF THE PEOPLE</p>
-<p>I OBEY THE LEADER AND COMMANDER OF THE PEOPLE</p>
-<p>I DESIRE THE CHIEF CORNERSTONE</p>
-<p>I APPRECIATE THE LILY OF THE VALLEY</p>
-<p>I FEAR THE LION OF THE TRIBE OF JUDAH</p>
-<p>I PRAISE THE RIDER OF THE HEAVENLY WHITE HORSE</p>
-<p>I ADMIRE THE BRIGHT MORNING STAR</p>
-<p>I EXALT THE HIGHEST POINT</p>
-<p>I EXALT THE PRINCE OF PEACE</p>
-<p>I WORSHIP THE VICTOR EVER GLORIOUS</p>
-<p>I HONOR THE MEDIATOR BETWEEN GOD AND MAN</p>
-<p>I PRAISE THE AUTHOR AND FINISHER OF MY FAITH</p>
-<p>I EXALT THE POINT OF POINTS</p>
-<p>I LOVE THE REDEEMER</p>
-<p>I EXALT THE UNCONQUERABLE CONQUEROR</p>
-<p>I EXALT VANQUISHER OF DEMON</p>
-<p>I OBEY THE MESSENGER OF THE CONVENANT</p>
-<p>I DESIRE THE APOSTLE OF PROTECTION</p>
-<p>I HONOR THE SHEPHERD AND BISHOP OF MY SOUL</p>
-<p>I FOLLOW THE CHIEF SHEPHERD</p>
-<p>I THIRST FOR THE LIVING WATER</p>
-<p>I SURRENDER TO THE REDEEMER</p>
-<p>I EXALT THE HIGH PRIEST</p>
-<p>I WORSHIP THE LORD</p>
-<p>I HOPE IN THE ONLY HOPE</p>
-<p>I EXALT THE HORN OF SALVATION</p>
-<p>I TRUST THE LAMP OF GOD</p>
-<p>I BELIEVE THE ROOT AND STOCK OF DAVID</p>
-<p>I RELY ON THE WORD OF GOD</p>
-<p>I TRUST THE OMNIPOTENT GOD</p>
-<p>I WORSHIP THE KING OF KINGS AND LORD OF LORDS</p>
-<p>I LIFT THE SCRIPTURE</p>
-<p>I PRAISE THE ROCK</p>
-<p>I APPRECIATE MY RIGHTEOUSNESS</p>
-<p>I LOVE THE IMAGE OF THE INVISIBLE GOD</p>
-<p>I LIFT THE SON OF DAVID</p>
-<p>I APPRECIATE THE ALL AND ALL</p>
-<p>I HONOUR THE HEAD</p>
-<p>I LOVE THE PASSOVER</p>
-<p>I EXALT THE BELOVED OF THE FATHER</p>
-<p>I ADMIRE THE RADIANCE OF GOD GLORY</p>
-<p>I OBEY THE I AM WHO I AM</p>
-<p>I PRAISE THE GOD OF ABRAHAM, ISAAC AND JACOB</p>
-<p>I APPRACIATE THE HOLY BRANCH</p>
-<p>I TRUST THE HEALER</p>
-<p>I APPRECIATE THE FIRST BORN OF ALL CREATION</p>
-<p>I EXALT THE GOOD SHEPHERD</p>
-<p>I THANK THE AMEN</p>
-<p>I LOVE OUR LIGHT AND SALVATION</p>
-<p>I AM ROOTED IN THE FIRM FOUNDATION IN ZION</p>
-<p>I STICK TO THE TRUE VINE</p>
-<p>I YIELD TO THE FAITHFUL AND TRUE WITNESS</p>
-<p>I EXALT THE GUARANTEE OF BETTER CONVENANT</p>
-<p>I THANK THE JUGDE</p>
-<p>I THANK THE DOOR</p>
-<p>I HONOUR THE WONDERFUL COUNSELLOR</p>
-<p>I APPRECIATE THE STAR</p>
-<p>I THIRST FOR THE DAYSPRING</p>
-<p>I SURRENDER TO MY DELIVERER</p>
-<p>I BELIEVE THE ANCIENT OF DAYS</p>
-<p>I EXALT MY SAVIOUR</p>
-<p>I ADORE THE NAME ABOVE ALL OTHER NAMES</p>
-<p>I ADORE THE LORD AND MY GOD</p>
-<p>I ADORE THE ELOHIM</p>
-<p>I ADORE THE ELOLAM</p>
+<h5>I PRAISE THE WOUNDED MESSIAH</h5>
+<h5>I WORSHIP MY LORD AND THE GOD</h5>
+<h5>I ADORE THE SAVIOUR</h5>
+<h5>I MAGNIFY THE LORD OF LORDS</h5>
+<h5>I EXALT THE ELSHADDAI</h5>
+<h5>I BLESS THE SOVEREIGN LORD OF ALL</h5>
+<h5>I LOVE EMMANUEL</h5>
+<h5>I WORSHIP THE ALPHA AND OMEGA</h5>
+<h5>I ADORE THE EVERLASTING GOD</h5>
+<h5>I GLORIFY THE SOVEREIGN LORD OF ALL</h5>
+<h5>I EXALT THE KING</h5>
+<h5>I MAGNIFY THE ELSHADAI</h5>
+<h5>I PRAISE THE WAY, THE TRUTH AND THE LIFE</h5>
+<h5>I WORSHIP THE LIFE AND THE ATONEMENT</h5>
+<h5>I ADORE THE BREAD OF LIFE</h5>
+<h5>I LOVE ALL I NEED</h5>
+<h5>I GLORIFY MY PROVIDER</h5>
+<h5>I PRAISE MY HEALING AND WHOLENESS</h5>
+<h5>I BLESS THE RESSURRECTION AND THE LIFE</h5>
+<h5>I APPRECIATE THE ARM OF GOD</h5>
+<h5>I THANK THE HOLY ONE OF GOD</h5>
+<h5>I UPLIFT THE ANNOINTED ONE</h5>
+<h5>I LOVE THE SON OF MAN</h5>
+<h5>I ADORE THE RABBONI</h5>
+<h5>I WORSHIP THE RANSOM</h5>
+<h5>I THANK THE ROSE OF SHARON</h5>
+<h5>I PRAISE THE SUN OF RIGHTEOUSNESS</h5>
+<h5>I EXALT THE BRIDEGROOM</h5>
+<h5>I WORSHIP THE BANNER OF THE PEOPLE</h5>
+<h5>I OBEY THE LEADER AND COMMANDER OF THE PEOPLE</h5>
+<h5>I DESIRE THE CHIEF CORNERSTONE</h5>
+<h5>I APPRECIATE THE LILY OF THE VALLEY</h5>
+<h5>I FEAR THE LION OF THE TRIBE OF JUDAH</h5>
+<h5>I PRAISE THE RIDER OF THE HEAVENLY WHITE HORSE</h5>
+<h5>I ADMIRE THE BRIGHT MORNING STAR</h5>
+<h5>I EXALT THE HIGHEST POINT</h5>
+<h5>I EXALT THE PRINCE OF PEACE</h5>
+<h5>I WORSHIP THE VICTOR EVER GLORIOUS</h5>
+<h5>I HONOR THE MEDIATOR BETWEEN GOD AND MAN</h5>
+<h5>I PRAISE THE AUTHOR AND FINISHER OF MY FAITH</h5>
+<h5>I EXALT THE POINT OF POINTS</h5>
+<h5>I LOVE THE REDEEMER</h5>
+<h5>I EXALT THE UNCONQUERABLE CONQUEROR</h5>
+<h5>I EXALT VANQUISHER OF DEMON</h5>
+<h5>I OBEY THE MESSENGER OF THE CONVENANT</h5>
+<h5>I DESIRE THE APOSTLE OF PROTECTION</h5>
+<h5>I HONOR THE SHEPHERD AND BISHOP OF MY SOUL</h5>
+<h5>I FOLLOW THE CHIEF SHEPHERD</h5>
+<h5>I THIRST FOR THE LIVING WATER</h5>
+<h5>I SURRENDER TO THE REDEEMER</h5>
+<h5>I EXALT THE HIGH PRIEST</h5>
+<h5>I WORSHIP THE LORD</h5>
+<h5>I HOPE IN THE ONLY HOPE</h5>
+<h5>I EXALT THE HORN OF SALVATION</h5>
+<h5>I TRUST THE LAMP OF GOD</h5>
+<h5>I BELIEVE THE ROOT AND STOCK OF DAVID</h5>
+<h5>I RELY ON THE WORD OF GOD</h5>
+<h5>I TRUST THE OMNIPOTENT GOD</h5>
+<h5>I WORSHIP THE KING OF KINGS AND LORD OF LORDS</h5>
+<h5>I LIFT THE SCRIPTURE</h5>
+<h5>I PRAISE THE ROCK</h5>
+<h5>I APPRECIATE MY RIGHTEOUSNESS</h5>
+<h5>I LOVE THE IMAGE OF THE INVISIBLE GOD</h5>
+<h5>I LIFT THE SON OF DAVID</h5>
+<h5>I APPRECIATE THE ALL AND ALL</h5>
+<h5>I HONOUR THE HEAD</h5>
+<h5>I LOVE THE PASSOVER</h5>
+<h5>I EXALT THE BELOVED OF THE FATHER</h5>
+<h5>I ADMIRE THE RADIANCE OF GOD GLORY</h5>
+<h5>I OBEY THE I AM WHO I AM</h5>
+<h5>I PRAISE THE GOD OF ABRAHAM, ISAAC AND JACOB</h5>
+<h5>I APPRACIATE THE HOLY BRANCH</h5>
+<h5>I TRUST THE HEALER</h5>
+<h5>I APPRECIATE THE FIRST BORN OF ALL CREATION</h5>
+<h5>I EXALT THE GOOD SHEPHERD</h5>
+<h5>I THANK THE AMEN</h5>
+<h5>I LOVE OUR LIGHT AND SALVATION</h5>
+<h5>I AM ROOTED IN THE FIRM FOUNDATION IN ZION</h5>
+<h5>I STICK TO THE TRUE VINE</h5>
+<h5>I YIELD TO THE FAITHFUL AND TRUE WITNESS</h5>
+<h5>I EXALT THE GUARANTEE OF BETTER CONVENANT</h5>
+<h5>I THANK THE JUGDE</h5>
+<h5>I THANK THE DOOR</h5>
+<h5>I HONOUR THE WONDERFUL COUNSELLOR</h5>
+<h5>I APPRECIATE THE STAR</h5>
+<h5>I THIRST FOR THE DAYSPRING</h5>
+<h5>I SURRENDER TO MY DELIVERER</h5>
+<h5>I BELIEVE THE ANCIENT OF DAYS</h5>
+<h5>I EXALT MY SAVIOUR</h5>
+<h5>I ADORE THE NAME ABOVE ALL OTHER NAMES</h5>
+<h5>I ADORE THE LORD AND MY GOD</h5>
+<h5>I ADORE THE ELOHIM</h5>
+<h5>I ADORE THE ELOLAM</h5>
 <h5>I ADORE THE ELMAKARIOUS (MY JOY)</h5>
 <h5>I ADORE THE ELSHAMMER (WHO IS HERE)</h5>
 <h5>I ADORE THE PRIMIUM MOVING IMMOBILE</h5>
@@ -417,35 +464,113 @@
                 </ol>
 
                 <h4>Don't ever try to define God by:</h4>
+                <ol>
                 <p><li>Social media opinions</li></p>
                 <p><li>Trends and culture</li></p>
                 <p><li>Personal feelings</li></p>
+                </ol>
 
                 <h4>Understand that God is not discovered by vibes; He is revealed by His Word. If you ignore the Word, you will misrepresent God. If you stay in the Word, you will encounter God.</h4>
-
-                <h3><a href="#Rubies">Rubies</a></h3>
-
+               
+                <h3>II. THE WORD MIRRORS MAN (JAMES 1:23-25)</h3>
+                <h4>"Anyone who listen to the word but does not do what it says is like someone who look at his face in amirror..." Just like laver exposed dirt, the Word exposes the true state of your heart.</h4>
+                <h3>A. The Word Reveals Man as a Sinner ( Ab Initio)</h3>
+                <h4>From the beginning (Genesis 3), the Word reveals man's fallen state.</h4>
+                <ol>
+                <h3><li>The Nature of Sin</li></h3>
+                <p>a. Rebelion against God (Isaiah53:6)</p>
+                <p>b. Disobedience (1 John3:4)</p>
+                <p>c. Corruption of nature (Roman3:23)</p>
+                <p>d. Constant commision</p>
+                <p>e. Consistence omision</p>
+                <p>f. Inadequacy</p>
+                <p>g. Insufficiency</p>
+                <h3><li>The consequence of Sin</li></h3>
+                <p>a. Seperation from God (Isaiah 59:2)</p>
+                <p>b. Spiritual death (Romans6:23)</p>
+                <p>c. Moral corruption (Jeremiah17:9)</p>
+                <p>d. Citizen of Heaven (Philippians3:20)
+                <p>e. Temple of the Holy Spirit (1 corinthians6:19)</p>
+                <h4>You are not what your past says---you are what the Word says.</h4>
+                <h3><li>Virtue-What You Should Become</li></h3>
+                <p>a. Faith (Romans5:1)
+                <p>b. Love (Romans5:5)</p>
+                <p>c. Grace (Conrinthians12:9)</p>
+                <p>d. Peace (Romans5:1)</p>
+                <p>e. Hope (colossians1:27)</p>
+                <h4>These are not self-help qualities--- they are divine deposits.</h4>
+                <h3><li>Vision-What You Should Become</li></h3>
+                <p>a. Christlikeness (Romas8:29)</p>
+                <p>b. Holiness (Hebrew12:14)</p>
+                <p>c. Maturity (Ephesians4:13)</p>
+                <p>d. Glory reflection (2corinthians3:18)
+                <h4>we all..."beholding as in a mirror the glory of the Lord, are being transformed..." Are you also bothered by the philosophical questions of "WHO AM I" "What is my purpose?" And you look for answers in:
+                <p>a. Trends</p>
+                <p>b. Relationships</p>
+                <p>c. Achievements</p>
+                <h4>Know these, your identity is not discovered outwardly; it is reveaaled in the Word. The Word tells you:</h4>
+                <p>a. Who you were</p>
+                <p>b. Who you are</p>
+                <p>Who you are becoming</p>
+                <h3>CONCLUSION</h3>
+                <h4>The Word of God is the divine mirror placed before our lives. It reveals God in His true nature, expose our true lcondition and trnsforms belivers into Christlikeness. Just as the priest needed the Laver, we need the Word to live effectively. Beloved, look into the Word to see Goid clearly, look into the Word to see yourself honestly, and look into the Word to be transformed daily. As the mirror of the Word reveals our stains and the water of the Word washes them away, we become capable of standing confidently befor God, walking in true identity and reflecting His glory to a searching generation. Therefore: Don't just scroll daily---search the Word daily. Don't just check your phone---- check your life in the mirror of Scripture. FZor thhe more you gaze into the Word, the more clearly you will see God and discover who you truly are.
             
-            Precious stone:
+            <h3>Precious stone:</h3>
             <ol>
-            <li><h3><a href="#Rubies">Rubies</a></h3></li>
-            <li><h3><a href="#Topas">Topas</a></h3></li>
-            <li><h3><a href="#Diamonds">Diamonds</a></h3></li>
-            <li><h3><a href="#Beryls">Beryls</a></h3></li>
-            <li><h3><a href="#Onyx">Onyx</a></h3></li>
-            <li>Jasper</li>
-            <li>Sapphires</li>
-            <li>Turquoise</li>
+            <h3><li><a href="#Rubies">Rubies</a></li></h3>
+            <h3><li><a href="#Topas">Topas</a></li></h3>
+            <h3><li><a href="#Diamonds">Diamonds</a></li></h3>
+            <h3><li><a href="#Beryls">Beryls</a></li></h3>
+            <h3><li><a href="#Onyx">Onyx</a></li></h3>
+            <h3><li><a href="#Jasper">Jasper</a></li></h3>
+            <h3><li><a href="#Sapphires">Sapphires</a></li></h3>
+            <h3><li><a href="#Turquoise">Turquoise</a></li></h3>
             </ol>
-        </h3
-         
-Rubies, topaz, diamonds, beryls, onyx, jasper, sapphires, turquoise, 				emeralds.
+ 
+<section id="Rubies">
+           <ol>
+           <h3><li>Rubies</li></h3>
+           <h3>Ruby is a precious red variety of the mineral corundum (), colored by chromium, and is one of the most valuable colored stones, with prices increasing significantly for high-quality, larger, and "pigeon blood" red stones. Known for its high hardness (9 on the Mohs scale), it is durable, often features inclusions, and is the traditional birthstone for July.</h3>
+           <img src="ruby.jpg">
+<section id="Topas">
+<h3><li>Topas</li></h3>
+<h3>Topaz is a highly durable (Mohs 8) silicate mineral, commonly used in jewelry due to its brilliant luster and wide color range, including popular blue, white, and yellow-orange varieties. As a November birthstone, it is often associated with wisdom, clarity, and strength. It is primarily sourced from Brazil, with natural colors ranging from colorless to yellow, brown, and rare pink or red, while most vibrant blues are heat-treated.</h3>
+<img src="topaz.jpg">
+<section id="Diamonds">
+          <h3><li>Diamonds</li></h3>
+<h3>Diamond is a rare natural mineral composed of carbon known for its extreme hardness, high thermal conductivity, and unique optical properties like intense sparkle and brilliance. It is one of the four traditional "precious stones," along with rubies, sapphires, and emeralds.</h3>
+<img src="diamond.jpg">
+<section id="Beryls">
+<h3><li>Beryls</li></h3>
+<h3>Beryl is a durable, highly prized mineral gemstone () ranging from 7.5 to 8 on the Mohs scale, known for forming hexagonal crystals in colors like green (emerald), blue (aquamarine), pink (morganite), and yellow (heliodor). Primarily sourced from Brazil, Colombia, and Africa, it is used in jewelry and is the main ore of beryllium.</h3>
+<img src="beryl.jpg">
+<section id="Onyx">
+<h3><li>Onyx</li></h3>
+<h3>Onyx is a silica based chalcedony mineral known for its parallel, contrasting bands of color, commonly deep black or white. It is a semi-translucent, durable stone (on the Mohs scale) often used in jewelry, decorative items, and backlight interior design elements like countertop or walls. It is distinct from banded calcite/limestone, often called "Mexican Onyx".</h3>
+<img src="onyx.jpg">
+<section id="Jasper">
+<h3><li>Jasper</li></h3>
+<h3>Jasper is an opaque, microcrystalline variety of quartz (chalcedony) known for its vibrant, varied, and often patterned appearance, ranging in colors from red, yellow, and green to brown and black. With a Mohs hardness of 6.5–7, it is durable, often used in jewelry as cabochons, and prized for grounding and protective metaphysical properties.<h3>
+, sapphires, turquoise, 				emeralds.
                 
                 
      </section>
 
+    <section id="support">
+    <h2>Support My Work</h2>
+
+    <p>
+        Thank you for visiting my website and supporting my work.
+    </p>
+
+    <a href=”Hello.docx” download=”My_Awesome_Ebook.pdf”>Download My Ebook Now</a>
+
+    <a href="YOUR-PAYMENT-LINK" target="_blank">
+    <button>Support Me</button>
+    </a>
+    </section>
+
 <footer>
     <h1>© 2026 Oluwaferanmi website. All Rights Reserved.</h1>
 </footer>
-</body>
-</html>   
+</html>
