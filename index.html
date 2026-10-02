@@ -1,37 +1,87 @@
    <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<body>
-    <style>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+     <title>UNDERSTANDING | Web Design & Creative Services</title>
+<style>
+
+        :root {
+            --primary: #3b82f6;
+            --secondary: #020617;
+            --accent: #f59e0b;
+            --light: #0f172a;
+            --text: #e5e7eb;
+            --white: #ffffff;
+          }
+
+          * {
+             box-sizing: border-box;
+             margin: 0;
+             padding: 0;
+           }
+
+           html {
+                 scroll-behavior: smooth;
+           }
+
         body {
-            background-image: url("d22532d3-62db-4ff1-a7dc-b87e0584bda9.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: Arial;
-            text-align: center;
-            margin; 0.5;
+            font-family: Arial,sans-serif;
+            baxckground-color: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
               }
 
+        /*HEADER */
         header {
-            background-color: blue;
-            color: yellow;
-            padding: 0.01px;
-            img : 10px;
+            background-color: #020617 !important;
+            color: #fffff !important;
+            padding: 30px 20px;
+            text-align: center;
                }
           
+        header img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+
+        /* NAVIGATION */
         nav {
-             background-color: red;
-             padding: 5px
+             background-color: #020617 !important;
+             padding: 15px 10px;
+             text-align: center
+             position: sticky;
+             top: 0;
+             z-index: 1000;
             }
     
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         nav a {
-            color: blue;
-            margin: 5px
+            color: #ffffff !important;
             text-decoration: none;
-            text-align: center;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 17px;
+            font weight: bold;
+            transition: 0.3s;
               }
+
+        nav a:hover {
+            background-color: #1e2v93b;
+            color: white;
+        }
 
         h1 {
             color: red;
@@ -72,7 +122,7 @@
 
         p {
            font-size: 18px;
-           color: white;  
+           color: yellow;  
            text-align: justify;     
           }
  
@@ -81,46 +131,130 @@
            text-align: justify;
            }
 
-        button:hover {
-            background-color: green;
-            transform:scale(1.05);
+        /* BUTTON */
+        button {
+            background-color: #1e2v93b;
+            color: black;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-                     }
-
-       section {
-           margin: 30px;
-           padding: 30px;
-           margin: 20px 0;
-           border-radius: 10px;
+            transition: 0.3s;
+            margin: 8px;
                }
 
-           section h2 {
-               color: #333;
-               font-size: 24px;
-               margin-bottom: 15px;
-                       }
+        button:hover {
+            background-color: #0f172a;
+            transform: translateY(-2px);
+                     }
+                     
+       /*SECTION*/
+       section {
+           background-color: #0f172a;
+           color; #e5e7eb;
+           max-width: 1100px;
+           margin: auto;
+           padding: 70px 20px;
+               }
+
+       section h2 {
+               color: var(--primary);
+               text-align: center;
+               font-size: 32px;
+               margin-bottom: 25px;
+                  }
 
             section p {
-                color: #555
-                font-size: 24px;
-                line-height: 1.6;
+                color: #4b5563
+                font-size: 18px;
+                line-height: 1.8;
+                margin-bottom: 15px;
                        }
 
-           .card {
-           background-color: orange;
-           width: 250px;
-           margin: 15px;
-           padding: 25px;
-           border-radius: 90px;
-           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-           border: 2px solid #ddd;
-           transition: 15.0s;
+           /* CARD */
+           .cards {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 25px;
+                  }
+
+            .card {
+                background-color: #1e2v93b;
+                color: #e5e7eb;
+                width: 280px;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 10);
+                border: 1px solid #334155;
+                transition: 0.3s ease;
                   }
 
         .card:hover {
-            transform: translate(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
                     }
 
+       .card h2,
+       .card h3 {
+           color: var(--primary);
+           text-align: center;
+           margin-bottom: 15px;
+       }
+
+       .card p {
+           font-size: 16px;
+       }
+
+    .about-content {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 50px;
+       max-width: 900px;
+       margin: auto;
+   }
+
+   .about-image {
+       flex: 1;
+   }
+
+   .about-image img {
+       width: 300px
+       height: 300px
+       object-fit: cover;
+       border-radius: 20px;
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+   .about-text {
+       flex: 1;
+   }
+
+   .about-text h3
+       color: var(--primary);
+       font-size: 30px;
+       margin-bottom: 15px;
+   }
+
+   .about-text p {
+       margin-bottom: 15px;
+   }
+
+   @media (max-width: 600px) {
+
+       .about-content {
+           flex-direction: column;
+           text-align: center;
+       }
+
+       .about-image img {
+           width: 230px;
+           height: 230px;
+       }
+   } 
        footer {
            background-color: green;
            color: red;
@@ -128,28 +262,152 @@
            margin-top: 40px;
               }
       
-@media (max-width: 600px;)
-
-    nav a {
-        display: block;
-        margin: 30px;
-        text-size:40px;
-    }
-
+    /* IMAGES */
     img {
-    max-width: 300px;
+    max-width: 100px;
     height: auto;
+    display: block;
+    margin: 0px auto;
     }
 
     .profile {
-        width: 50px;
-        height: 50px;
-        object-fit: square;
-        border-radius: 30%;
-        object-fit: square;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
              }
 
+     /* HERO */
+     .hero {
+         text-align: center;
+         padding: 1000px 20px;
+         background: linear-gradient(rgba(15, 23, 42, 0, 85), rgba(30, 58, 138, 0.85));
+         color: white;
+     }
+
+     .hero h1 {
+          color: white;
+          max-width: 700px
+          font-size: 20px;
+          margin: 0 auto 30px:
+     }
+
+     .hero p {
+         color: white;
+         font-size: 20px;
+         max-width: 700px;
+         margin:0 auto 30px;
+     }
+
+     #Skills {
+         padding: 60px 20px;
+         text-align: center;
+     }
+
+     #Skills h2 {
+         font-ssize: 32px;
+         margin-bottom: 30px;
+     }
+
+     .card h3 {
+         font-size: 22px;
+     }
+
+     /* LINKS */
+     a {
+        color: var(primary);
+       }
+
+     /* AUDIO AND VIDEO */
+     audio,
+     video {
+         display: block;
+         max-width: 100%;
+         margin: 20px auto;
+         border-radius: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+       background-color: var(--secondary);
+       color: white;
+       text-align: center;
+       padding: 30px 20px;
+       margin-top: 40px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      nav ul {
+          flex-direction: column;
+          align-items: center;
+     }
+
+     nav a {
+         display: block;
+         width: 200px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+     }
+
+    .hero p {
+        font-size: 17px;
+
+    section {
+        padding: 50px 15px;
+    }
+
+    .card {
+       width: 100%;
+       max-width: 350px;
+    }
+   }
+        /* DARK MODE */
+        body {
+           background-color: #0f172a !important;
+           color: #e5e7eb !important;
+        }
+
+        header {
+           background-color: #020617 !important;
+           color: white !important;
+        }
+
+        nav {
+            background-color: #020617 !important;
+        }
+        nav a {
+            color: white !important;
+        }
+
+        section {
+            background-color: 0f172a !important;
+            color: #e5e7eb !important;
+        }
+
+        section p {
+           color: #d1d5db !important;
+        }
+
+        .card {
+            backgroun-color: #1e293b !important;
+            color: #e5e7eb !important;
+        }
+
+        .about-text h3,section h2{
+            color: #60a5fa !important;
+        }
+
+        footer {
+            background-color: #20617 !important;
+            color: white !important;
+        }
     </style>
+</head>
+<body>
 
 <button onclick="payWithPaystack()">Support Me</button>
 
@@ -185,23 +443,28 @@ function payWithPaystack() {
     });
 }
 </script>
-</body>
 <header>
-    <h1><img src="img1.jpg"></h1>
-    <nav>
-        <a href="#Home">Home</a>
-        <a href="#About">About</a>
-        <a href="#Contact">Contact</a>
-        <a href="#Skills">Skills</a>
-        <a href="#Audios">Audios</a>
-        <a href="#Videos">Videos</a>
-        <a href="#Projects">Projects</a>
-        <a href="#support">Support</a>
-    </nav>
+    <img src="img1.jpg"alt="UNDERSTANDING">
+    <h1>UNDERSTANDING</h1>
+    <p>Web Designer . Graphics Designer . Writer</p>
 </header>
+     <nav>
+            <ul>
+           <li><a href="#Home">Home</a></li>
+           <li><a href="#About">About</a></li>
+           <li><a href="#Contact">Contact</a></li>
+           <li><a href="#Skills">Skills</a></li>
+           <li><a href="#Why-Me">Why Me</a>
+           <li><a href="#Audios">Audios</a></li>
+           <li><a href="#Videos">Videos</a></li>
+           <li><a href="#Projects">Projects</a></li>
+           <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
 
 <section id="Home">
     <h1>UNDERSTANDING WEB DESIGN</h1>
+    <p>Welcome to my website. I create websites, graphics, written project and other digital services.</p>
     <h3><img src="transform.jpg"></h3>
     <p>This is Under that is standing which makes it UNDERSTANDING.</p>
     <h2><img src="transforms.jpg"></h2>
@@ -220,65 +483,35 @@ function payWithPaystack() {
 </section>
 
     <section id="About">
-        <h1>OLUWAFERANMI</h1>
-        <h5>My name is Oluwaferanmi.</h5>
-        <h5><img src="outdoor.jpg"></h5>
-        <h5>The meaning of Oluwaferanmi is that The Lord Loves me.</h5>
-        <h5>Truly The Lord Loves me because He didnt condem the World.</h5>
-        <h5>I am child of God because God himself turn to human being and come to this earth and surrender himself for me.</h5>
-        <h5>The Lord loves me and I must love Him also so that I won't be ungrateful.</h5>
-        <h5>He lays example of how I should live if truly I want Him to know I love Him.</h5>
-        <h5>He said I must Love my Neigbor as myself if I want to Him in my life</h5>
-        <h5>The four letter LOVE is not just a word but a powerful that one must be careful when observing it</h5>
-        <a href="#Contact">Contact</a>
+        <h2>About me</h2>
+        
+        <div class="about-content">
+
+           <div class="about-image">
+                <img src="outdoor.jpg"alt="UNDERSTANDING">
+           </div>
+
+           <div class="about-text">
+
+               <h3>UNDERSTANDING</h3>
+
+               <p>My name is Oluwaferanmi. I am passionate about web design, graphics design, creative writing and digital projects.</p>
+  
+               <p>The meaning of Oluwaferanmi is <strong>"The Lord Loves me."</strong></p>
+               <p>Truly The Lord Loves me because He didnt condem the World beacuse if the world is condem I would have perish and I won't exist. <strong>There is more to that just align</strong></p>
+               <p>I am child of God because God himself turn to human being and come to this earth and surrender himself for me.</p>
+               <p>The Lord loves me and I must love Him also so that I won't be ungrateful.</p>
+               <p>He lays example of how I should live if truly I want Him to know I love Him.</p>
+               <p>He said I must Love my Neigbor as myself if I want to Him in my life</p>
+               <p>The four letter LOVE is not just a word but a powerful that one must be careful when observing it</p>
+               <p>I believe in creativity, learning, excellence and using my skills to create useful things for people.</p>
+               <p>My goal is to continue developing my skills and provide quality services while creating meaningful digital experiences.</p>
+               <a href="#Contact"><button>Contact Me</button></a>
+           </div>
+         </div>
      </section>
 
-     <section id="Skills">
-         <h2>WORKPLACE</h2>
-<div class="cards">
-
-          <div class="card">
-                 <h2>WEBSITE</h2>
-                 <p>I can build the structure of webpage professionally.</p>
-                 <a href="#Contact">Contact</a>
-          </div>
-  
-        <div class="card">
-                <h2>Call Me for your DJ Mix Play</h2>
-                <p>I am good in Mixing Good Music together that will makes sense to your tune.</p>
-                <a href="#Contact">Contact</a> 
-         </div>
-
-         <div class="card">
-                 <h2>Business Website</h2>
-                 <p>A simple website designed fora business.</p>
-                 <button>View Project</button>
-         </div>
-
-        <div class="card">
-                <h2>WRITE UP</h2>
-                <p>Call me for your write up.</p>
-                <button>I am available</button>
-                <a href="#Contact">Contact</a>
-         </div>
-
-        <div class="card">
-                <h2>GRAPHICS DESIGN</h2>
-                <p>Call me for your graphics dsign.</p>
-                <button>I am available</button>
-                <a href="#Contact">Contact</a>
-       </div>
-
-       <div class="card">
-                <h2>PRAYER</h2>
-                <p>Let pray together and see God in action. I believe in God.</p>
-                <button>Call me anytime</button>
-       </div>
-</div>
-
-     </section> 
-
-     <section id="Contact">
+<section id="Contact">
          <h2>Contact Me</h2>
          
          <strong><p>You can call me.</p></strong>
@@ -286,12 +519,97 @@ function payWithPaystack() {
         <h5><a href="tel: +2349031252585">+234 903 125 2585</a></h5>
         <a href="mailto:frnmtmth@gmail.com">Send Me an Email</a>
         <button>chat with me on whatsapp<a href="https://wa.me/2349031252585?text=Hello%20Feranmi,%201%20am%20interested%20in%20your%20website%20services."target="_09031252585"></a></button>
-        
-        
-        
+          
      </section>
 
-     <section id="Audios">
+
+
+     <section id="Skills">
+         <h2>WORKPLACE</h2>
+         
+         <p style="text-align: CENTER;">
+             here are some of the service I provide.
+         </p>
+
+         <div class="cards">
+
+             <div class="card">
+                 <h3>Website Design</h3>
+                 <p>
+                     I creaate responsible and professional websites for individual, businesses and organizations.
+                 </p>
+                 <a href=#Contact">
+                     <button>Contact Me</button>
+                 </a>
+             </div>
+
+             <div class="card">
+                 <h3>Graphics Design</h3>
+                 <p>
+                     I create flyers, possters, promotional graphics and oher creative designs
+                 </p>
+                  <a href="=Contact">
+                      <button>Contact Me</button>
+                  </a>
+              </div>
+
+              <div class"card">
+                  <h3>Project Writting</h3>
+                  <p>
+                      I help with well-organized project writing, document and other written poject work.
+                  </p>
+                  <a href="#Contact">
+                      <button>Contact Me</button>
+                  </a>
+              </div>
+
+              <div class"card">
+                  <h3>DJ Mix & Music</h3>
+                  <p>
+                      I create and mix music and provide entertainment audio content.
+                  </p>
+                  <a href="#Adious">
+                       <button>Listen</button>
+                  </a>
+               </div>
+
+               <div class="card">
+                   <h3>E-book</h3>
+                   <p>
+                      Discover my written Christian cintent and e-book available for purchase.
+                   </p>
+                   <a href="#support">
+                        <button>View E-book</button>
+                   </a>
+               </div>
+         
+         </div>
+
+     </section>
+
+     <section id="Why-Me">
+         <h2>Why Choose Me?</h2>
+
+         <div class="cards">
+
+           <div class="card">
+               <h3>Professional</h3>
+               <p>I focus on creating clean and professional websites for my clients</p>
+           </div>
+
+           <div class="card">
+               <h3>Responsive</h3>
+               <p>I buid websites that can work well on phones, tablets and computers.</p>
+           </div>
+
+           <div class="card">
+               <h3>Reliable</h3>
+               <p>I am cimmited to providing quality work and good communication with clients.</p>
+           </div>
+      </div>
+      </section>
+
+<section id="Audios">
      <h3><a href="#Audios">My Music</a></h3>
      <h5>I make music and you can see and listen to them for free when you click the button below</h5>
      <audio controls>
